@@ -1,23 +1,25 @@
 
-
+import { Fade } from "react-reveal";
 
 
 function Header(){
     return(
         <div className="HeaderContent">
+            <Fade left>
             <ul className="List_header">
+                <span className="menuBtn"><button>Botao</button></span>
                 <li><a href="#">Home</a></li>             
-                <li><a href="#">Products</a></li>                
+                <li><a href="#">Culture</a></li>                
                 <li><a href="#">Contacts</a></li>
                 
             </ul>
-
-            <div><img src=".\src\assets\imgs\8413774581556105697-128.png" alt="" /></div>
+            </Fade>
+            <Fade bottom>
+            <div><img src=".\src\assets\imgs\castle.png" alt="Japan art" /></div>
+            </Fade>
         </div>
     )
 }
-
-
 
 
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@600&family=Rubik:wght@600&display=swap');
 
 
 
@@ -11,12 +11,15 @@
     color: white;
     
 }
+body{
+    background-color: #212126;
+}
 
 .MainSectionContent{
     height: 100vh;
     background-color: #f1f1f1;
     display: grid; 
-    grid-template-columns: 0.3fr 2fr 3fr; 
+    grid-template-columns: 0.3fr 3fr 3fr; 
     grid-template-rows: 1fr; 
     grid-template-areas:  ". . ."; 
    
@@ -28,7 +31,8 @@
 /* Header Style */
 
 .HeaderContent{
-    background-color: #874FCE;
+    background: rgb(33,33,38);
+    background: linear-gradient(50deg, rgba(33,33,38,1) 0%, rgba(135,79,206,1));
     color: white;
     height: 100vh;      
     display: flex;
@@ -37,17 +41,16 @@
     align-items: center;
 
 }
-.HeaderContent div{
-    background-color: white;
+.HeaderContent div{    
     margin: 10px;    
     border-radius: 50%;
-    padding: 10px;    
+    padding: 5x;    
     cursor: pointer;       
        
 }
 .HeaderContent div img{
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
 }
 
 
@@ -71,11 +74,20 @@
     border-bottom: 2px solid transparent;
     color: white;
     text-align: center;
+    letter-spacing: 4px;
     
 }
+
+
+
 .List_header li:hover{
-    border-bottom: 2px solid black;     
+    border-bottom: 2px solid #212126;     
     
+}
+
+
+.menuBtn{
+    display: none;
 }
 
 
@@ -86,13 +98,13 @@
    
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 2em;
-    padding: 20px;
-
+    
 }
 .spanContainer{
-    background-color: #864fce;
+    background: rgb(33,33,38);
+    background: linear-gradient(50deg, rgba(33,33,38,1) 0%, rgba(135,79,206,1));
     padding: 10px;
     border-radius: 30%;
     display: flex;
@@ -143,13 +155,138 @@
  width: 250px;
  height: 250px;
  border-radius: 50%;
- background-color: #874FCE;
+ background: rgb(33,33,38);
+ background: linear-gradient(50deg, rgba(33,33,38,1) 0%, rgba(135,79,206,1));
  position: relative;
  right: 6em;
+ transition: all 0.2s ease-in-out;
 }
+
+
 
 
 .BallsContent div:nth-child(2){    
     position: relative;
     right: 20em;
+    animation: ballsTransition 5s infinite 0.3s forwards ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.BallsContent div:nth-child(1){    
+    position: relative;
+    right: 20em;
+    animation: ballsTransition 5s infinite 0.3s forwards ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.BallsContent div:nth-child(3){    
+    position: relative;
+    right: 20em;
+    animation: ballsTransition 10s infinite 1s forwards ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
+@keyframes ballsTransition {
+    0%{width: 250px; 
+       height: 250px;
+       background-color: #212126; 
+        transition: all 0.2s ease-in-out;}
+
+    25%{width: 200px; 
+        height: 200px;
+        background-color: #874FCE;
+        transition: all 0.2s ease-in-out}
+
+    50%{width: 150px; 
+        height: 150px;
+        background-color: #212126;
+        transition: all 0.2s ease-in-out}
+        
+    100%{width: 250px; 
+        height: 250px;
+        background-color: #874FCE;
+        transition: all 0.2s ease-in-out}
+}
+
+
+
+
+
+/* Second Section */
+
+
+
+.secondSection{
+    position: relative;
+    
+    background: rgb(33,33,38);
+    background: linear-gradient(90deg, rgba(33,33,38,1) 0%, rgba(135,79,206,1) 70%, rgba(255,255,255,1) 100%);  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    padding: 3em; 
+    gap: 2em;
+}
+.infoContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    gap: 1em;    
+    font-family: 'Roboto', serif;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+.infoContent h2{
+    font-size: 4em;
+    letter-spacing: 4px;
+    
+}
+.infoContent p{
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: 300;
+    
+}
+.cardsContent{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 50px;
+    flex-flow:  row wrap;
+    width: 50%;
+    
+}
+.cardsContent div{
+    max-width: 200px;
+    height: 200px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex-flow: row wrap;
+    padding: 10px;
+    text-align: center;
+    
+}
+.cardsContent div p{
+    color: #864fce;
+    font-weight: bold;
+    font-size: 15px;
+}
+.cardsContent img{
+    width: 80px;
+    height: 80px;
+    background-color: #864fce44;
+    padding: 5px;
+    border-radius: 50%;
 }

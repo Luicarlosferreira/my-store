@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './assets/css/App.css'
+import SecondSection from './components/infoSection/SecondSection'
 import MainSection from './components/main/MainSection'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 
     <div className="App">
         <MainSection></MainSection>
+        <SecondSection></SecondSection>
 
     </div>
   )
