@@ -1,7 +1,7 @@
 
 
 
-function ballsDesign(){
+function BallsDesign(){
     return(
         <div className="BallsContent">
             <div></div>
@@ -13,4 +13,4 @@ function ballsDesign(){
 
 
 
-export default ballsDesign;
+export default BallsDesign;

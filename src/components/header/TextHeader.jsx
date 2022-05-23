@@ -1,12 +1,20 @@
 
-
 function TextHeader(){
     return(
-        <div>
-            <span></span>
-            <h2>All that you need is <br /> 
-            here, by your side.
+        <div className="TextContentHeader">
+            
+            
+            <div className="spanContainer">            
+                <img src=".\src\assets\imgs\16741343401556273568-128.png" />           
+            </div>
+
+
+
+            <h2>
+             All that you need is <br /> 
+            here, <strong>by your side.</strong> 
             </h2>
+            
         </div>
     )
 }

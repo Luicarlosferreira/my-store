@@ -3,68 +3,153 @@
 
 
 *{
-    box-sizing: border-box;
-    font-family: 'Rubik', 'Roboto', serif;
+    box-sizing: border-box;    
     margin: 0;
     padding:0;
     list-style: none;
     text-decoration: none;
+    color: white;
+    
 }
 
 .MainSectionContent{
     height: 100vh;
     background-color: #f1f1f1;
+    display: grid; 
+    grid-template-columns: 0.3fr 2fr 3fr; 
+    grid-template-rows: 1fr; 
+    grid-template-areas:  ". . ."; 
    
 }
+
+
+
+
+/* Header Style */
 
 .HeaderContent{
     background-color: #874FCE;
     color: white;
-    height: 100vh;    
-    width: 100px;
+    height: 100vh;      
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    align-items: left;
+    align-items: center;
 
 }
 .HeaderContent div{
-    background-color: black;
-    margin: 10px;
-    text-align: center;
-    border-radius: 10px;
-    padding: 5px;
-    transition: all 0.2s ease-in;
-    cursor: pointer;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-.HeaderContent div:hover{
     background-color: white;
-    color: black;
+    margin: 10px;    
+    border-radius: 50%;
+    padding: 10px;    
+    cursor: pointer;       
+       
 }
+.HeaderContent div img{
+    width: 35px;
+    height: 35px;
+}
+
 
 .HeaderContent ul{
     text-align: left;
     padding: 5px;
     display: flex;
     flex-flow: column wrap;
-    gap: 1em;
-    font-weight: bold;
-    letter-spacing: 1px;
+    gap: 10px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    justify-content: center;
+    align-items: left;
+    
 }
 .HeaderContent ul li{
-    
+    font-family: 'Roboto', serif;
     cursor: pointer;    
     padding: 3px;
     transition: all 0.2s ease-in;
     border-bottom: 2px solid transparent;
-    border-left: 2px solid transparent;
-    
+    color: white;
+    text-align: center;
     
 }
-.HeaderContent ul li:hover{
-    border-bottom: 2px solid black;
-    border-left: 2px solid black;
+.List_header li:hover{
+    border-bottom: 2px solid black;     
     
+}
+
+
+
+
+
+.TextContentHeader{
+   
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+    padding: 20px;
+
+}
+.spanContainer{
+    background-color: #864fce;
+    padding: 10px;
+    border-radius: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.spanContainer img{
+    width: 35px;
+    height: 35px;
+    position: relative;
+    left: 5px;
+    animation: spinner 6s infinite 0.3s forwards ease-in-out;
+}
+
+
+@keyframes spinner{
+    0%{transform: scale(0.2);}
+    25%{transform: scale(0.5);}
+    50%{transform: scale(0.8);}
+    100%{transform: scale(1);}
+}
+
+
+.TextContentHeader h2{
+    font-size: 3em;
+    font-family:  serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #212126;
+}
+.TextContentHeader h2 strong{
+    color: #874FCE;
+  
+}
+
+
+.BallsContent{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2em;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+.BallsContent div{
+ width: 250px;
+ height: 250px;
+ border-radius: 50%;
+ background-color: #874FCE;
+ position: relative;
+ right: 6em;
+}
+
+
+.BallsContent div:nth-child(2){    
+    position: relative;
+    right: 20em;
 }
