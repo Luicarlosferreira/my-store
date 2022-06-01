@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './assets/css/App.css'
 import SecondSection from './components/infoSection/SecondSection'
 import MainSection from './components/main/MainSection'
+import SpanScroll from './components/main/SpanScroll'
+import RoutesCompoments from './pages/RoutesComponents'
 
 function App() {
   const [count, setCount] = useState('')
@@ -10,9 +12,12 @@ function App() {
 
 
     <div className="App">
-        <MainSection></MainSection>
-        <SecondSection></SecondSection>
+      <RoutesCompoments />
+        <MainSection />
+        <SecondSection />
+        <SpanScroll />
 
+    
     </div>
   )
 }

@@ -9,11 +9,46 @@
     list-style: none;
     text-decoration: none;
     color: white;
+    scroll-behavior: smooth;
     
 }
 body{
     background-color: #212126;
 }
+
+#spanCotent{
+    background: linear-gradient(90deg, rgba(33,33,38,1) 0%, rgba(135,79,206,1) 70%); 
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0;
+    right: 0;     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4000;       
+    float: right;
+    padding: 15px;
+    margin: 10px;    
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+   
+
+}
+
+
+#spanCotent:hover{
+    background: linear-gradient(90deg, rgb(24, 24, 27) 0%, rgb(120, 37, 230) 70%); 
+    padding: 25px;
+}
+
+#spanCotent span{
+    font-family: serif;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+
+
 
 .MainSectionContent{
     height: 100vh;
@@ -44,7 +79,7 @@ body{
 .HeaderContent div{    
     margin: 10px;    
     border-radius: 50%;
-    padding: 5x;    
+    padding: 5px;    
     cursor: pointer;       
        
 }
@@ -59,30 +94,32 @@ body{
     padding: 5px;
     display: flex;
     flex-flow: column wrap;
-    gap: 10px;
-    font-weight: bolder;
+    gap: 10px;    
     letter-spacing: 2px;
     justify-content: center;
     align-items: left;
     
 }
 .HeaderContent ul li{
-    font-family: 'Roboto', serif;
+    font-family: serif;   
+    font-weight: 600; 
     cursor: pointer;    
-    padding: 3px;
+    padding: 5px;
     transition: all 0.2s ease-in;
     border-bottom: 2px solid transparent;
-    color: white;
+    border-radius: 5px;
+    
     text-align: center;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
+    
     
 }
 
 
 
 .List_header li:hover{
-    border-bottom: 2px solid #212126;     
     
+    background-color: #2121267e;
 }
 
 
